@@ -1,10 +1,12 @@
 import React from "react";
+import Logo from "../../logo.svg";
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-dark navbar-expand-lg bg-dark">
       <div className="container">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand d-flex align-items-center" href="#">
+          <img src={Logo} alt="logo" height="28" />
           Victor Arias
         </a>
         <button
