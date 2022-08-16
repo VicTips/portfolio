@@ -6,7 +6,7 @@ const Projects = () => {
   console.log(projectImg);
   return (
     <div className="container">
-      <div className="text-center">Projects</div>
+      <div className="text-center fs-1 fw-bold">Projects</div>
       <div className="d-flex justify-content-around gap-2 flex-wrap">
         {ProjectsList.map((project, index) => (
           <div key={index}>

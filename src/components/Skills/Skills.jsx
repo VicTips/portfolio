@@ -4,7 +4,7 @@ import SkillsList from "../../services/Constants/SkillsList";
 const Skills = () => {
   return (
     <div className="container">
-      <div className="text-center">Skills</div>
+      <div className="text-center fs-1 fw-bold">Skills</div>
       <div className="d-flex justify-content-center gap-3 flex-wrap">
         {SkillsList.map((skill, index) => (
           <div key={index}>
