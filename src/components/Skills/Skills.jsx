@@ -3,8 +3,8 @@ import SkillsList from "../../services/Constants/SkillsList";
 
 const Skills = () => {
   return (
-    <div className="container">
-      <div className="text-center fs-1 fw-bold">Skills</div>
+    <div className="container my-3">
+      {/* <div className="text-center fs-1 fw-bold">Skills</div> */}
       <div className="d-flex justify-content-center gap-4 flex-wrap">
         {SkillsList.map((skill, index) => (
           <div key={index}>

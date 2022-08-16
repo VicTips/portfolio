@@ -1,15 +1,15 @@
 const SkillsList = [
   {
-    name: "JavaScript",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
-  },
-  {
     name: "HTML5",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
   },
   {
     name: "CSS3",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+  },
+  {
+    name: "JavaScript",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
   },
   {
     name: "Bootstrap",

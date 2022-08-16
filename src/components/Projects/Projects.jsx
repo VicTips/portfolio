@@ -5,7 +5,7 @@ const Projects = () => {
   const [projectImg, setProjectImg] = useState("");
   console.log(projectImg);
   return (
-    <div className="container">
+    <div className="container mt-5">
       <div className="text-center fs-1 fw-bold">Projects</div>
       <div className="d-flex justify-content-around gap-2 flex-wrap">
         {ProjectsList.map((project, index) => (
