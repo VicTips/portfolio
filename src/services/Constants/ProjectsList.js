@@ -31,7 +31,7 @@ const ProjectsList = [
     description: "This is a personal project that allows the user to calculate equivalent interest rates.",
     technologies: ["React", "Bootstrap", "JavaScript"],
     img: "https://images2.imgbox.com/c2/a5/9K5EDqs9_o.png",
-    screenshoots: [],
+    screenshoots: ["https://images2.imgbox.com/cf/3c/GGJF159K_o.png", "https://images2.imgbox.com/ba/1e/LL8jPh5L_o.png"],
     repository: "https://github.com/VicTips/convertidor-tasas",
     siteURL: "https://calculadora-tasas.herokuapp.com/"
   }
