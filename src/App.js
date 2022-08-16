@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 import Skills from "./components/Skills/Skills";
 
@@ -7,6 +8,7 @@ const App = () => {
     <div>
       <NavBar />
       <Skills />
+      <Footer />
     </div>
   );
 };
