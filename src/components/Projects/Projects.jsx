@@ -106,7 +106,7 @@ const Projects = () => {
                               index === 0 && "active"
                             } `}
                             key={index}
-                            data-bs-interval="5000"
+                            data-bs-interval="3000"
                           >
                             <img
                               src={screenshoot}

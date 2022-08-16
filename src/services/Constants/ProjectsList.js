@@ -13,7 +13,7 @@ const ProjectsList = [
     description: "This was my individual project for the Henry Bootcamp. All components were styled using CSS only. It is an app about dogs, which includes search, filter, sort and create functions.",
     technologies: ["React", "Redux Toolkit", "CSS", "NodeJS", "Express", "PostgreSQL", "Sequelize"],
     img: "https://images2.imgbox.com/84/97/SqjZs7Rw_o.png",
-    screenshoots: [],
+    screenshoots: ["https://images2.imgbox.com/2f/c7/lG5fYwHu_o.png", "https://images2.imgbox.com/e1/91/zEF2x4ur_o.png", "https://images2.imgbox.com/34/22/T6NgtkUo_o.png", "https://images2.imgbox.com/c9/83/fKFedA6o_o.png", "https://images2.imgbox.com/17/59/NH2la045_o.png"],
     repository: "https://github.com/VicTips/frontdogspi",
     siteURL: "https://dogs-app-victips.netlify.app/"
   },
