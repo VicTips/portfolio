@@ -34,7 +34,7 @@ const About = () => {
             <a
               href={CV}
               download="Victor_Arias-CV-Full_Stack_Web_Developer.pdf"
-              className="btn-blue d-inline-block mt-3 text-decoration-none letter-spacing"
+              className="btn-blue d-inline-block mt-3 text-decoration-none letter-spacing fw-bold"
             >
               Download CV
             </a>

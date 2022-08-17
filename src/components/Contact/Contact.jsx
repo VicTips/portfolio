@@ -67,7 +67,7 @@ const Contact = () => {
         <input
           type="submit"
           value="Send"
-          className="btn-blue mt-3 w-100 border-0 letter-spacing"
+          className="btn-blue mt-3 w-100 border-0 letter-spacing fw-bold"
         />
       </form>
     </div>
