@@ -30,7 +30,7 @@ const Contact = () => {
   };
   return (
     <div className="text-secondary py-4">
-      <div className="fs-1 fw-bold mb-3 underline-blue text-center text-light">
+      <div className="fs-1 fw-bold mb-3 underline-blue text-center text-light letter-spacing">
         Contact me
       </div>
       <form ref={form} onSubmit={sendEmail}>
@@ -67,7 +67,7 @@ const Contact = () => {
         <input
           type="submit"
           value="Send"
-          className="btn-blue mt-3 w-100 border-0"
+          className="btn-blue mt-3 w-100 border-0 letter-spacing"
         />
       </form>
     </div>

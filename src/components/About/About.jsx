@@ -11,7 +11,7 @@ const About = () => {
             <img
               src="https://images2.imgbox.com/1e/31/cgCab1v0_o.png"
               alt="profile pic"
-              className="rounded-circle"
+              className="rounded-circle shadow"
               height={220}
             />
           </div>
@@ -25,7 +25,7 @@ const About = () => {
             <a
               href={CV}
               download="Victor_Arias-CV-Full_Stack_Web_Developer.pdf"
-              className="btn-blue d-inline-block mt-3 text-decoration-none"
+              className="btn-blue d-inline-block mt-3 text-decoration-none letter-spacing"
             >
               Download CV
             </a>

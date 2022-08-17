@@ -6,9 +6,9 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
       <div className="container">
-        <div className="navbar-brand d-flex align-items-center text-light">
-          <img src={Logo} alt="logo" height="28" className="me-2" />
-          Victor Arias
+        <div className="navbar-brand d-flex align-items-center text-light letter-spacing">
+          <img src={Logo} alt="logo" height="32" className="me-2" />
+          {/* Victor Arias */}
         </div>
 
         <div
@@ -42,17 +42,17 @@ const NavBar = () => {
           </svg>
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 text-secondary mt-2 mt-lg-0">
-            <li className="nav-item ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 text-light mt-2 mt-lg-0">
+            <li className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold">
               About
             </li>
-            <li className="nav-item ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold">
+            <li className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold">
               Projects
             </li>
-            <li className="nav-item ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold">
+            <li className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold">
               Contact
             </li>
-            <li className="nav-item ps-lg-5 px-0 text-center py-2 py-lg-0">
+            <li className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

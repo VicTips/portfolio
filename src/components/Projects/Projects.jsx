@@ -6,7 +6,7 @@ const Projects = () => {
   console.log(projectImg);
   return (
     <div className="container min-vh-100">
-      <div className="text-center fs-1 fw-bold underline-blue">Projects</div>
+      <div className="text-center fs-1 fw-bold underline-blue letter-spacing">Projects</div>
       <div className="d-flex justify-content-around gap-2 flex-wrap">
         {ProjectsList.map((project, index) => (
           <div key={index}>
@@ -37,9 +37,9 @@ const Projects = () => {
                     </h5>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="pointer"
+                      className="pointer close"
                       viewBox="0 0 20 20"
-                      fill="#38afb3"
+                      fill="currentcolor"
                       data-bs-dismiss="modal"
                       aria-label="Close"
                       height={34}
