@@ -30,21 +30,21 @@ const Contact = () => {
   };
   return (
     <div className="text-secondary py-4">
-      <div className="fs-1 fw-bold mb-3 underline-blue text-center text-light letter-spacing">
-        Contact me
+      <div className="fs-1 fw-bold mb-3 underline-blue text-center letter-spacing tags text-blue-dark">
+        <span className="text-light">Contact me</span>
       </div>
       <form ref={form} onSubmit={sendEmail}>
         <div className="mb-2 d-flex gap-2">
           <input
             type="text"
             name="user_name"
-            className="form-control bg-dark text-light"
+            className="form-control text-light border-secondary"
             placeholder="Name"
           />
           <input
             type="email"
             name="user_email"
-            className="form-control bg-dark text-light"
+            className="form-control text-light border-secondary"
             placeholder="Email"
           />
         </div>
@@ -52,14 +52,14 @@ const Contact = () => {
           <input
             type="text"
             name="subject"
-            className="form-control bg-dark text-light"
+            className="form-control text-light border-secondary"
             placeholder="Subject"
           />
         </div>
         <div className="mb-2">
           <textarea
             name="message"
-            className="form-control bg-dark text-light"
+            className="form-control text-light border-secondary"
             placeholder="Message"
             rows={4}
           />

@@ -4,7 +4,7 @@ import Logo from "../../assets/logo-VA-azul.svg";
 const NavBar = () => {
   const [expanded, setExpanded] = useState(false);
   return (
-    <nav className="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
+    <nav className="navbar navbar-dark navbar-expand-lg bg-dark fixed-top border-bottom border-secondary">
       <div className="container">
         <div className="navbar-brand">
           <img src={Logo} alt="logo" height="32" />

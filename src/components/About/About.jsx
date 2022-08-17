@@ -11,7 +11,7 @@ const About = () => {
             <img
               src="https://images2.imgbox.com/1e/31/cgCab1v0_o.png"
               alt="profile pic"
-              className="rounded-circle shadow"
+              className="rounded-circle shadow border-3 border-white border"
               height={220}
             />
           </div>

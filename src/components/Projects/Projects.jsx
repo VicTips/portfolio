@@ -6,8 +6,8 @@ const Projects = () => {
   console.log(projectImg);
   return (
     <div className="container min-vh-100">
-      <div className="text-center fs-1 fw-bold underline-blue letter-spacing">
-        Projects
+      <div className="text-center fs-1 fw-bold underline-blue letter-spacing text-blue-dark tags">
+        <span className="text-dark">Projects</span>
       </div>
       <div className="d-flex justify-content-around gap-2 flex-wrap">
         {ProjectsList.map((project, index) => (
@@ -29,7 +29,7 @@ const Projects = () => {
               aria-hidden="true"
             >
               <div className="modal-dialog modal-lg modal-dialog-centered">
-                <div className="modal-content bg-light px-4 rounded-4">
+                <div className="modal-content bg-ligth px-4 shadow">
                   <div className="modal-header pt-3 pb-1">
                     <h5
                       className="modal-title fw-bold text-blue-dark fs-2"
@@ -37,21 +37,23 @@ const Projects = () => {
                     >
                       {project.name}
                     </h5>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="pointer close"
-                      viewBox="0 0 20 20"
-                      fill="currentcolor"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                      height={34}
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
+                    <div className="text-secondary">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="pointer close"
+                        viewBox="0 0 20 20"
+                        fill="currentcolor"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                        height={34}
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
                   </div>
                   <div className="modal-body">
                     <div className="d-flex flex-wrap">

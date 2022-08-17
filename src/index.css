@@ -148,3 +148,26 @@ body {
 .project-hover:hover {
   color: var(--dark-blue) !important;
 }
+
+.form-control {
+  border-radius: 0 !important;
+  background-color: rgb(52, 58, 63) !important;
+}
+
+.form-control:focus {
+  outline: 4px solid var(--dark-blue) !important;
+  background-color: rgb(83, 87, 90) !important;
+}
+
+.tags:before {
+  content: "< ";
+}
+
+.tags::after {
+  content: " />";
+}
+
+.modal-content {
+  border-radius: 0 !important;
+  border: none !important;
+}
