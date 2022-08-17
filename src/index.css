@@ -1,3 +1,8 @@
+:root {
+  --normal-blue: #5ce1e6;
+  --dark-blue: #38afb3;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -7,15 +12,60 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+* {
+  font-family: "Nunito", sans-serif;
 }
 
 .bg-blue-normal {
-  background-color: #5ce1e6;
+  background-color: var(--normal-blue);
+}
+
+.bg-blue-dark {
+  background-color: var(--dark-blue);
 }
 
 .text-blue-normal {
-  color: #5ce1e6;
+  color: var(--normal-blue);
+}
+
+.text-blue-dark {
+  color: var(--dark-blue);
+}
+
+.btn-blue {
+  background-color: var(--dark-blue);
+  color: whitesmoke;
+  padding: 0.5rem 2rem;
+}
+
+.btn-blue:hover {
+  background-color: var(--normal-blue);
+  color: whitesmoke;
+}
+
+.link-blue {
+  color: var(--dark-blue);
+  font-size: 0.9rem;
+}
+
+.link-blue:hover {
+  color: var(--normal-blue);
+}
+
+.chip {
+  background-color: rgb(79, 76, 76);
+  color: var(--normal-blue);
+  font-family: "Fira Code", monospace;
+}
+
+.underline-blue {
+  background-image: linear-gradient(var(--dark-blue) 0 0);
+  background-position: bottom center;
+  background-size: 4rem 0.3rem;
+  background-repeat: no-repeat;
+  padding-bottom: 0.3rem;
+}
+
+.ff-fira-code {
+  font-family: "Fira Code", monospace;
 }

@@ -29,8 +29,10 @@ const Contact = () => {
       );
   };
   return (
-    <div className="text-secondary py-4" style={{ width: "30rem" }}>
-      <div className="fs-1 fw-bold mb-3">Contact me</div>
+    <div className="text-secondary py-4">
+      <div className="fs-1 fw-bold mb-3 underline-blue text-center text-light">
+        Contact me
+      </div>
       <form ref={form} onSubmit={sendEmail}>
         <div className="mb-2 d-flex gap-2">
           <input
@@ -62,9 +64,11 @@ const Contact = () => {
             rows={4}
           />
         </div>
-        <div className="mt-3 d-flex justify-content-end">
-          <input type="submit" value="Send" className="btn btn-outline-info" />
-        </div>
+        <input
+          type="submit"
+          value="Send"
+          className="btn-blue mt-3 w-100 border-0"
+        />
       </form>
     </div>
   );

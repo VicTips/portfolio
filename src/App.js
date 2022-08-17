@@ -6,7 +6,7 @@ import Projects from "./components/Projects/Projects";
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-light">
       <NavBar />
       <About />
       <Projects />
