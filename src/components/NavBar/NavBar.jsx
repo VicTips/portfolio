@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { changeMode } from "../../redux/styleSlice";
 import Logo from "../../assets/logo-VA-azul.svg";
 
 const NavBar = () => {
   const [expanded, setExpanded] = useState(false);
+  const dispatch = useDispatch();
+  const textColor = useSelector((state) => state.styles.textColor);
   return (
     <nav className="navbar navbar-dark navbar-expand-lg bg-dark fixed-top border-bottom border-secondary">
       <div className="container">
@@ -51,7 +55,10 @@ const NavBar = () => {
             <li className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold letter-spacing">
               Contact
             </li>
-            <li className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0">
+            <li
+              className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0"
+              onClick={() => dispatch(changeMode())}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -60,11 +67,15 @@ const NavBar = () => {
                 strokeWidth="2"
                 style={{ height: "1.4rem" }}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                />
+                {textColor === "text-light" ? (
+                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                  />
+                )}
               </svg>
             </li>
           </ul>

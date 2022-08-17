@@ -1,8 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Skills from "../Skills/Skills";
 import CV from "../../assets/VictorArias-CV-FullStackWebDeveloper.pdf";
 
 const About = () => {
+  const bgColor = useSelector((state) => state.styles.bgColor);
+  const textColor = useSelector((state) => state.styles.textColor);
   return (
     <div className="container d-flex align-items-center justify-content-center mt-5 mt-md-0 row min-vh-100 mx-auto pt-5 pt-md-0">
       <div className="col-md-7">
@@ -20,7 +23,7 @@ const About = () => {
               <div className="fs-1 fw-bold text-secondary text-start">
                 Hi there!
               </div>
-              <div className="text-dark fs-name">I'm Victor Arias</div>
+              <div className={`${textColor} fs-name`}>I'm Victor Arias</div>
               <div className="fs-2 fw-bold text-blue-dark text-center">
                 Full Stack Web Developer
               </div>

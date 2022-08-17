@@ -1,23 +1,35 @@
 import React from "react";
 import SkillsList from "../../services/Constants/SkillsList";
+import { useSelector } from "react-redux/es/exports";
 
 const Skills = () => {
+  const textColor = useSelector((state) => state.styles.textColor);
   return (
     <div className="container my-3">
       <div className="text-center fs-1 fw-bold underline-blue mb-4 letter-spacing text-blue-dark tags">
-        <span className="text-dark">Skills</span>
+        <span className={textColor}>Skills</span>
       </div>
       <div className="d-flex justify-content-center gap-4 flex-wrap">
         {SkillsList.map((skill, index) => (
           <div key={index}>
-            <div className="d-flex justify-content-center">
-              <img src={skill.img} alt={`${skill.name}-logo`} height={34} />
+            <div className="d-flex justify-content-center ">
+              <img
+                src={skill.img}
+                alt={`${skill.name}-logo`}
+                height={34}
+                className={
+                  textColor === "text-light" &&
+                  (skill.name === "Express" || skill.name === "GitHub")
+                    ? "filter"
+                    : ""
+                }
+              />
             </div>
             <div
               className="text-center fw-semibold"
-              style={{ fontSize: "0.8rem" }}
+              style={{ fontSize: "0.8rem", marginTop: "0.1rem" }}
             >
-              {skill.name}
+              <div className={textColor}>{skill.name}</div>
             </div>
           </div>
         ))}

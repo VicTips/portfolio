@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import ProjectsList from "../../services/Constants/ProjectsList";
+import { useSelector } from "react-redux/es/exports";
 
 const Projects = () => {
   const [projectImg, setProjectImg] = useState("");
-  console.log(projectImg);
+  const textColor = useSelector((state) => state.styles.textColor);
+  const bgColor = useSelector((state) => state.styles.bgColor);
   return (
     <div className="container min-vh-100">
       <div className="text-center fs-1 fw-bold underline-blue letter-spacing text-blue-dark tags">
-        <span className="text-dark">Projects</span>
+        <span className={textColor}>Projects</span>
       </div>
       <div className="d-flex justify-content-around gap-2 flex-wrap">
         {ProjectsList.map((project, index) => (
@@ -29,7 +31,7 @@ const Projects = () => {
               aria-hidden="true"
             >
               <div className="modal-dialog modal-lg modal-dialog-centered">
-                <div className="modal-content bg-ligth px-4 shadow">
+                <div className={`${bgColor} modal-content px-4 shadow`}>
                   <div className="modal-header pt-3 pb-1">
                     <h5
                       className="modal-title fw-bold text-blue-dark fs-2"
@@ -60,14 +62,16 @@ const Projects = () => {
                       {project.technologies.map((technology, index) => (
                         <div
                           key={index}
-                          className="me-1 border py-1 px-2 rounded-2 chip shadow"
+                          className="me-1 border-0 py-1 px-2 rounded-2 chip shadow"
                           style={{ fontSize: "0.8rem" }}
                         >
                           {technology}
                         </div>
                       ))}
                     </div>
-                    <div className="my-3">{project.description}</div>
+                    <div className={`my-3 ${textColor}`}>
+                      {project.description}
+                    </div>
                     <div className="d-flex gap-4 ms-2">
                       <a
                         className="d-flex align-items-center gap-1 text-decoration-none fw-bold link-blue"
