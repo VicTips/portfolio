@@ -14,7 +14,7 @@ const Projects = () => {
               onMouseEnter={() => setProjectImg(project.img)}
               data-bs-toggle="modal"
               data-bs-target={`#deleteModal${index}`}
-              className="fw-semibold text-secondary fs-5"
+              className="fw-semibold text-secondary fs-5 pointer"
             >
               {project.name}
             </div>
@@ -37,7 +37,7 @@ const Projects = () => {
                     </h5>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5"
+                      className="pointer"
                       viewBox="0 0 20 20"
                       fill="#38afb3"
                       data-bs-dismiss="modal"

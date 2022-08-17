@@ -69,3 +69,12 @@ body {
 .ff-fira-code {
   font-family: "Fira Code", monospace;
 }
+
+.navbar-toggler {
+  border: none !important;
+  cursor: pointer;
+}
+
+.pointer {
+  cursor: pointer;
+}

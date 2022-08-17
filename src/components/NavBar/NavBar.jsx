@@ -1,25 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../assets/logo-VA-azul.svg";
 
 const NavBar = () => {
+  const [expanded, setExpanded] = useState(false);
   return (
     <nav className="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
       <div className="container">
-        <a className="navbar-brand d-flex align-items-center text-light" href="#">
+        <div className="navbar-brand d-flex align-items-center text-light">
           <img src={Logo} alt="logo" height="28" className="me-2" />
           Victor Arias
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
+        </div>
+
+        <div
+          className="text-light navbar-toggler"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentcolor"
+            height={34}
+            onClick={() => setExpanded(!expanded)}
+          >
+            {!expanded ? (
+              <path
+                fillRule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clipRule="evenodd"
+              />
+            ) : (
+              <path
+                fillRule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+            )}
+          </svg>
+        </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0 text-secondary mt-2 mt-lg-0">
             <li className="nav-item ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold">
