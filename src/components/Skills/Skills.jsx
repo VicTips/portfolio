@@ -16,7 +16,7 @@ const Skills = () => {
               <img
                 src={skill.img}
                 alt={`${skill.name}-logo`}
-                height={34}
+                height={38}
                 className={
                   textColor === "text-light" &&
                   (skill.name === "Express" || skill.name === "GitHub")

@@ -62,7 +62,7 @@ const Projects = () => {
                       {project.technologies.map((technology, index) => (
                         <div
                           key={index}
-                          className="me-1 border-0 py-1 px-2 rounded-2 chip shadow"
+                          className="me-1 border-0 py-1 px-2 chip shadow"
                           style={{ fontSize: "0.8rem" }}
                         >
                           {technology}
@@ -119,7 +119,7 @@ const Projects = () => {
                       className="carousel slide my-3"
                       data-bs-ride="carousel"
                     >
-                      <div className="carousel-inner rounded-4 shadow">
+                      <div className="carousel-inner shadow">
                         {project.screenshoots.map((screenshoot, index) => (
                           <div
                             className={`carousel-item ${
