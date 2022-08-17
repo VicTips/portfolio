@@ -47,6 +47,14 @@ const Contact = () => {
           />
         </div>
         <div className="mb-2">
+          <input
+            type="text"
+            name="subject"
+            className="form-control bg-dark text-light"
+            placeholder="Subject"
+          />
+        </div>
+        <div className="mb-2">
           <textarea
             name="message"
             className="form-control bg-dark text-light"
@@ -55,7 +63,7 @@ const Contact = () => {
           />
         </div>
         <div className="mt-3 d-flex justify-content-end">
-          <input type="submit" value="Send" className="btn btn-light" />
+          <input type="submit" value="Send" className="btn btn-outline-info" />
         </div>
       </form>
     </div>

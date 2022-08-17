@@ -1,5 +1,6 @@
 import React from "react";
 import Skills from "../Skills/Skills";
+import CV from "../../assets/VictorArias-CV-FullStackWebDeveloper.pdf";
 
 const About = () => {
   return (
@@ -21,7 +22,13 @@ const About = () => {
           <Skills />
         </div>
         <div className="d-flex justify-content-center">
-          <div className="btn btn-dark d-inline-block my-3">Download CV</div>
+          <a
+            href={CV}
+            download="Victor_Arias-CV-Full_Stack_Web_Developer.pdf"
+            className="btn btn-outline-info d-inline-block my-3"
+          >
+            Download CV
+          </a>
         </div>
       </div>
     </div>

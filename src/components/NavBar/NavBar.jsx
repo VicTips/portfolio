@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
       <div className="container">
-        <a className="navbar-brand d-flex align-items-center" href="#">
+        <a className="navbar-brand d-flex align-items-center text-light" href="#">
           <img src={Logo} alt="logo" height="28" className="me-2" />
           Victor Arias
         </a>
