@@ -6,7 +6,9 @@ const Projects = () => {
   console.log(projectImg);
   return (
     <div className="container min-vh-100">
-      <div className="text-center fs-1 fw-bold underline-blue letter-spacing">Projects</div>
+      <div className="text-center fs-1 fw-bold underline-blue letter-spacing">
+        Projects
+      </div>
       <div className="d-flex justify-content-around gap-2 flex-wrap">
         {ProjectsList.map((project, index) => (
           <div key={index}>
@@ -14,7 +16,7 @@ const Projects = () => {
               onMouseEnter={() => setProjectImg(project.img)}
               data-bs-toggle="modal"
               data-bs-target={`#deleteModal${index}`}
-              className="fw-semibold text-secondary fs-5 pointer"
+              className="fw-semibold text-secondary fs-5 pointer project-hover"
             >
               {project.name}
             </div>

@@ -44,12 +44,32 @@ body {
 }
 
 .link-blue {
-  color: var(--dark-blue);
   font-size: 0.9rem;
+  display: inline-block;
+  position: relative;
+  color: var(--dark-blue);
+}
+
+.link-blue:after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -3px;
+  left: 10%;
+  background-color: var(--dark-blue);
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+
+.link-blue:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
 }
 
 .link-blue:hover {
-  color: var(--normal-blue);
+  color: var(--dark-blue);
 }
 
 .chip {
@@ -93,4 +113,32 @@ body {
 
 .letter-spacing {
   letter-spacing: 0.15rem;
+}
+
+.project-hover {
+  display: inline-block;
+  position: relative;
+  color: var(--dark-blue);
+}
+
+.project-hover:after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 10%;
+  background-color: var(--dark-blue);
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+
+.project-hover:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+
+.project-hover:hover {
+  color: var(--dark-blue) !important;
 }

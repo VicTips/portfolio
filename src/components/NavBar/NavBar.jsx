@@ -6,9 +6,8 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
       <div className="container">
-        <div className="navbar-brand d-flex align-items-center text-light letter-spacing">
-          <img src={Logo} alt="logo" height="32" className="me-2" />
-          {/* Victor Arias */}
+        <div className="navbar-brand">
+          <img src={Logo} alt="logo" height="32" />
         </div>
 
         <div
