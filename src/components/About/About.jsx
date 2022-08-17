@@ -15,12 +15,18 @@ const About = () => {
               height={220}
             />
           </div>
-          <div className="fs-1 fw-bold">
-            Hi, I'm <span className="text-blue-dark">Victor</span>
+          <div className="d-flex justify-content-center">
+            <div style={{ maxWidth: "32rem" }}>
+              <div className="fs-1 fw-bold text-secondary text-start">
+                Hi there!
+              </div>
+              <div className="text-dark fs-name">I'm Victor Arias</div>
+              <div className="fs-2 fw-bold text-blue-dark text-center">
+                Full Stack Web Developer
+              </div>
+            </div>
           </div>
-          <div className="fs-2 fw-bold text-secondary">
-            Full Stack Web Developer
-          </div>
+          <div></div>
           <div className="d-flex justify-content-center">
             <a
               href={CV}
@@ -32,7 +38,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="col-md-5 d-flex align-items-center">
+      <div className="col-md-5 d-flex align-items-center my-5 my-md-0">
         <Skills />
       </div>
     </div>

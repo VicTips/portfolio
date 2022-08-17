@@ -7,10 +7,10 @@ const Footer = () => {
       <div className="container">
         <Contact />
         <div
-          className="text-center py-2 text-light border-top border-secondary"
+          className="text-center py-3 text-light border-top border-secondary"
           style={{ fontSize: "0.9rem" }}
         >
-          Copyright © 2022. All Rights Reserved | Designed & Built by <em>Victor Arias</em>
+          Copyright © 2022. All Rights Reserved | Designed & Built by <em className="text-blue-normal">Victor Arias</em>
         </div>
       </div>
     </div>
