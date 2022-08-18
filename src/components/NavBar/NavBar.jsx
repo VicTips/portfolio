@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { changeMode } from "../../redux/styleSlice";
+import { Link } from "react-scroll";
 import Logo from "../../assets/logo-VA-azul.svg";
 
 const NavBar = () => {
@@ -45,16 +46,22 @@ const NavBar = () => {
           </svg>
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 text-light mt-2 mt-lg-0">
-            <li className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold letter-spacing">
-              About
-            </li>
-            <li className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold letter-spacing">
-              Projects
-            </li>
-            <li className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold letter-spacing">
-              Contact
-            </li>
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 mt-2 mt-lg-0 text-light">
+            <Link to="aboutSection">
+              <li className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold letter-spacing">
+                About
+              </li>
+            </Link>
+            <Link to="projectsSection" offset={-100}>
+              <li className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold letter-spacing">
+                Projects
+              </li>
+            </Link>
+            <Link to="contactSection">
+              <li className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold letter-spacing">
+                Contact
+              </li>
+            </Link>
             <li
               className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0"
               onClick={() => dispatch(changeMode())}

@@ -7,7 +7,7 @@ const Projects = () => {
   const textColor = useSelector((state) => state.styles.textColor);
   const bgColor = useSelector((state) => state.styles.bgColor);
   return (
-    <div className="container min-vh-100">
+    <div className="container min-vh-100" name="projectsSection">
       <div className="text-center fs-1 fw-bold underline-blue letter-spacing text-blue-dark tags">
         <span className={textColor}>Projects</span>
       </div>

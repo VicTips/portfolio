@@ -29,9 +29,9 @@ const Contact = () => {
       );
   };
   return (
-    <div className="text-secondary py-4">
+    <div className="text-secondary py-4" name="contactSection">
       <div className="fs-1 fw-bold mb-3 underline-blue text-center letter-spacing tags text-blue-dark">
-        <span className="text-light">Contact me</span>
+        <span className="text-light">Contact Me</span>
       </div>
       <form ref={form} onSubmit={sendEmail}>
         <div className="mb-2 d-flex gap-2">
