@@ -43,6 +43,14 @@ body {
   color: whitesmoke;
 }
 
+.link-social {
+  color: var(--dark-blue);
+}
+
+.link-social:hover {
+  color: var(--normal-blue);
+}
+
 .link-blue {
   font-size: 0.9rem;
   display: inline-block;
@@ -152,12 +160,20 @@ body {
 
 .form-control {
   border-radius: 0 !important;
-  background-color: rgb(52, 58, 63) !important;
+  background-color: rgb(135, 160, 176) !important;
+  border: 0 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05rem !important;
+}
+
+.form-control::placeholder {
+  color: rgb(209, 206, 206) !important;
+  font-weight: 500 !important;
 }
 
 .form-control:focus {
   outline: 4px solid var(--dark-blue) !important;
-  background-color: rgb(83, 87, 90) !important;
+  background-color: rgb(105, 133, 154) !important;
 }
 
 .tags:before {

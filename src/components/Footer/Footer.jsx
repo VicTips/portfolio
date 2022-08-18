@@ -1,11 +1,13 @@
 import React from "react";
 import Contact from "../Contact/Contact";
+import { useSelector } from "react-redux";
 
 const Footer = ({ contact }) => {
+  const bgColor = useSelector((state) => state.styles.bgColor);
   return (
     <div className="min-vh-100">
       <div
-        className="bg-dark border-bottom border-secondary d-flex align-items-center contact-section-height"
+        className={`${bgColor} border-bottom border-secondary d-flex align-items-center contact-section-height`}
         ref={contact}
       >
         <div className="container">

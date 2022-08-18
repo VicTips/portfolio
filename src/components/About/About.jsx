@@ -30,7 +30,7 @@ const About = ({ about }) => {
                 Full Stack Web Developer
               </div>
               <div className="text-secondary fs-5">
-                (I also love drumming, and watching horror movies)
+                (I also love Drumming, and watching Horror Movies)
               </div>
             </div>
           </div>
@@ -39,7 +39,7 @@ const About = ({ about }) => {
             <a
               href={CV}
               download="Victor_Arias-CV-Full_Stack_Web_Developer.pdf"
-              className="btn-blue d-inline-block mt-3 text-decoration-none letter-spacing fw-bold"
+              className="btn-blue d-inline-block mt-3 text-decoration-none letter-spacing fw-bold shadow"
             >
               Download CV
             </a>
