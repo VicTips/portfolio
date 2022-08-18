@@ -20,7 +20,7 @@ const Projects = ({ projects }) => {
               <span className={textColor}>Projects</span>
             </div>
             <div className="text-secondary mb-xl-3 mb-xxl-4 mb-2 fs-5 text-center">
-              This are <strong>some</strong> of my projects
+              These are <strong>some</strong> of my projects
             </div>
             <div className="text-center">
               {ProjectsList.map((project, index) => (

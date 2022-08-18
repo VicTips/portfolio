@@ -87,6 +87,7 @@ const Contact = () => {
               href="https://github.com/victips"
               target="_blank"
               className="text-decoration-none link-social"
+              rel="noreferrer"
             >
               <svg viewBox="0 0 128 128" height={45}>
                 <g fill="currentcolor">
@@ -104,6 +105,7 @@ const Contact = () => {
               href="https://www.linkedin.com/in/victips/"
               target="_blank"
               className="text-decoration-none link-social"
+              rel="noreferrer"
             >
               <svg viewBox="0 0 128 128" height={45}>
                 <g fill="currentcolor">
