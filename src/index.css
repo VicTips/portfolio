@@ -186,3 +186,13 @@ body {
   height: 35px;
   width: 35px;
 }
+
+.contact-section-height {
+  min-height: calc(100vh - 3.35rem);
+}
+
+@media (max-width: 517.5px) {
+  .contact-section-height {
+    min-height: calc(100vh - 4.7rem);
+  }
+}

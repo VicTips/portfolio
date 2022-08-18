@@ -16,8 +16,11 @@ const Projects = ({ projects }) => {
       <div className="row">
         <div className="col-lg-5 d-flex justify-content-center alignt-items-center py-lg-5 py-3">
           <div>
-            <div className="text-center fs-1 fw-bold underline-blue letter-spacing text-blue-dark tags mb-xl-4 mb-xxl-5 mb-3">
+            <div className="text-center fs-1 fw-bold underline-blue letter-spacing text-blue-dark tags mb-3">
               <span className={textColor}>Projects</span>
+            </div>
+            <div className="text-secondary mb-xl-3 mb-xxl-4 mb-2 fs-5 text-center">
+              This are some of my projects, you can check my GitHub for more.
             </div>
             <div className="text-center">
               {ProjectsList.map((project, index) => (
@@ -26,7 +29,7 @@ const Projects = ({ projects }) => {
                     onMouseEnter={() => setProjectImg(project.img)}
                     data-bs-toggle="modal"
                     data-bs-target={`#deleteModal${index}`}
-                    className="fw-semibold text-secondary fs-5 pointer project-hover"
+                    className={`fw-semibold fs-5 pointer project-hover ${textColor}`}
                   >
                     {project.name}
                   </div>
@@ -171,14 +174,12 @@ const Projects = ({ projects }) => {
         </div>
         <div className="col-lg-7 d-flex justify-content-center align-items-center">
           {projectImg !== "" && (
-            <div className="d-flex justify-content-center">
-              <img
-                src={projectImg}
-                alt="projectImg"
-                className="img-fluid"
-                style={{ maxHeight: "30rem" }}
-              />
-            </div>
+            <img
+              src={projectImg}
+              alt="projectImg"
+              className="img-fluid"
+              style={{ maxHeight: "30rem" }}
+            />
           )}
         </div>
       </div>

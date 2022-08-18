@@ -29,6 +29,9 @@ const About = ({ about }) => {
               <div className="fs-2 fw-bold text-blue-dark text-center">
                 Full Stack Web Developer
               </div>
+              <div className="text-secondary fs-5">
+                (I also love drumming, and watching horror movies)
+              </div>
             </div>
           </div>
           <div></div>

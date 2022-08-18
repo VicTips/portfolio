@@ -3,9 +3,9 @@ import Contact from "../Contact/Contact";
 
 const Footer = ({ contact }) => {
   return (
-    <>
+    <div className="min-vh-100">
       <div
-        className="bg-dark border-top border-bottom border-secondary"
+        className="bg-dark border-bottom border-secondary d-flex align-items-center contact-section-height"
         ref={contact}
       >
         <div className="container">
@@ -23,7 +23,7 @@ const Footer = ({ contact }) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
