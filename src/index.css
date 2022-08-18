@@ -176,3 +176,13 @@ body {
 .filter {
   filter: invert();
 }
+
+.btn-back-top {
+  background-color: var(--normal-blue);
+  position: fixed;
+  color: rgb(255, 255, 255);
+  bottom: 20px;
+  right: 20px;
+  height: 35px;
+  width: 35px;
+}

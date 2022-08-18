@@ -27,7 +27,7 @@ const ProjectsList = [
     siteURL: "https://simulador-credito.netlify.app/"
   },
   {
-    name: "Equivalent Interest Rate Calculator Web App",
+    name: "Equivalent Interest Rate Web App",
     description: "This is a personal project that allows the user to calculate equivalent interest rates.",
     technologies: ["React", "Bootstrap", "JavaScript"],
     img: "https://images2.imgbox.com/c2/a5/9K5EDqs9_o.png",

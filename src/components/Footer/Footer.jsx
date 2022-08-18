@@ -19,7 +19,7 @@ const Footer = ({ contact }) => {
             style={{ fontSize: "0.9rem" }}
           >
             Copyright © 2022. All Rights Reserved | Designed & Built by{" "}
-            <em className="text-blue-normal">Victor Arias</em>
+            <strong className="text-blue-normal">Victor Arias</strong>
           </div>
         </div>
       </div>

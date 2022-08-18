@@ -4,6 +4,7 @@ import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 import Projects from "./components/Projects/Projects";
 import { useSelector } from "react-redux/es/exports";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const App = () => {
   const about = useRef(null);
@@ -13,6 +14,7 @@ const App = () => {
   return (
     <div className={bgColor}>
       <NavBar about={about} projects={projects} contact={contact} />
+      <ScrollToTop />
       <About about={about} />
       <Projects projects={projects} />
       <Footer contact={contact} />
