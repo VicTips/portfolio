@@ -3,11 +3,14 @@ import { useSelector } from "react-redux";
 import Skills from "../Skills/Skills";
 import CV from "../../assets/VictorArias-CV-FullStackWebDeveloper.pdf";
 
-const About = () => {
+const About = ({ about }) => {
   const textColor = useSelector((state) => state.styles.textColor);
   return (
-    <div className="container d-flex align-items-center justify-content-center mt-5 mt-lg-0 row min-vh-100 mx-auto pt-5 pt-lg-0">
-      <div className="col-lg-6 col-xl-5">
+    <div
+      className="container d-flex align-items-center justify-content-center row min-vh-100 mx-auto pt-5 pt-lg-0"
+      ref={about}
+    >
+      <div className="col-lg-6 col-xl-5 pt-5 pt-lg-0">
         <div className="text-center">
           <div className="pb-3">
             <img
@@ -40,7 +43,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="col-lg-6 col-xl-7 d-flex align-items-center my-5 my-lg-0">
+      <div className="col-lg-6 col-xl-7 d-flex align-items-center mt-5 my-lg-0">
         <Skills />
       </div>
     </div>

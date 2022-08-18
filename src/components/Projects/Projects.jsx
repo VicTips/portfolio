@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import ProjectsList from "../../services/Constants/ProjectsList";
 import { useSelector } from "react-redux/es/exports";
 
-const Projects = () => {
-  const [projectImg, setProjectImg] = useState("");
+const Projects = ({ projects }) => {
+  const [projectImg, setProjectImg] = useState(
+    "https://images2.imgbox.com/49/a5/4kh31hZ3_o.png"
+  );
   const textColor = useSelector((state) => state.styles.textColor);
   const bgColor = useSelector((state) => state.styles.bgColor);
   return (
-    <div className="container min-vh-100">
+    <div
+      className="container min-vh-100 h-100 d-flex align-items-center justify-content-center"
+      ref={projects}
+    >
       <div className="row">
         <div className="col-lg-5 d-flex justify-content-center alignt-items-center py-lg-5 py-3">
           <div>

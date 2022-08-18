@@ -1,10 +1,13 @@
 import React from "react";
 import Contact from "../Contact/Contact";
 
-const Footer = () => {
+const Footer = ({ contact }) => {
   return (
     <>
-      <div className="bg-dark border-top border-bottom border-secondary">
+      <div
+        className="bg-dark border-top border-bottom border-secondary"
+        ref={contact}
+      >
         <div className="container">
           <Contact />
         </div>
