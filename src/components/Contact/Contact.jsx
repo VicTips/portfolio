@@ -29,7 +29,7 @@ const Contact = () => {
       );
   };
   return (
-    <div className="text-secondary py-4" name="contactSection">
+    <div className="text-secondary py-4">
       <div className="fs-1 fw-bold mb-3 underline-blue text-center letter-spacing tags text-blue-dark">
         <span className="text-light">Contact Me</span>
       </div>

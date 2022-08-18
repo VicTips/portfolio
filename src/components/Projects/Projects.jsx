@@ -7,7 +7,7 @@ const Projects = () => {
   const textColor = useSelector((state) => state.styles.textColor);
   const bgColor = useSelector((state) => state.styles.bgColor);
   return (
-    <div className="container min-vh-100" name="projectsSection">
+    <div className="container min-vh-100">
       <div className="row">
         <div className="col-lg-5 d-flex justify-content-center alignt-items-center py-lg-5 py-3">
           <div>
