@@ -18,7 +18,7 @@ const Skills = () => {
                 alt={`${skill.name}-logo`}
                 height={38}
                 className={
-                  textColor === "text-light" &&
+                  textColor === "text-light-va" &&
                   (skill.name === "Express" || skill.name === "GitHub")
                     ? "filter"
                     : skill.name === "JavaScript"
