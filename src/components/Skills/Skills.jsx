@@ -21,6 +21,8 @@ const Skills = () => {
                   textColor === "text-light" &&
                   (skill.name === "Express" || skill.name === "GitHub")
                     ? "filter"
+                    : skill.name === "JavaScript"
+                    ? "shadow-sm"
                     : ""
                 }
               />

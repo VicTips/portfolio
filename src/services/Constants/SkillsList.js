@@ -9,7 +9,7 @@ const SkillsList = [
   },
   {
     name: "JavaScript",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
   },
   {
     name: "Bootstrap",
@@ -29,7 +29,8 @@ const SkillsList = [
   },
   {
     name: "NodeJS",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg"
+
   },
   {
     name: "Express",
