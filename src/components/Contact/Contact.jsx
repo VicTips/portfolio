@@ -1,34 +1,78 @@
 import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { useSelector } from "react-redux";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const YOUR_SERVICE_ID = process.env.REACT_APP_YOUR_SERVICE_ID;
   const YOUR_TEMPLATE_ID = process.env.REACT_APP_YOUR_TEMPLATE_ID;
   const YOUR_PUBLIC_KEY = process.env.REACT_APP_YOUR_PUBLIC_KEY;
   const textColor = useSelector((state) => state.styles.textColor);
+  const bgColorRGB =
+    textColor === "text-light-va" ? "rgb(192, 188, 188)" : "rgb(44, 44, 52)";
+  const textColorRGB =
+    textColor !== "text-light-va" ? "rgb(192, 188, 188)" : "rgb(44, 44, 52)";
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    background: bgColorRGB,
+    color: textColorRGB,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener("mouseenter", Swal.stopTimer);
+      toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
+  });
+
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        YOUR_SERVICE_ID,
-        YOUR_TEMPLATE_ID,
-        form.current,
-        YOUR_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          console.log("Msg sent"); //Agregar un toast
-          e.target.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    if (input.user_name && input.user_email && input.subject && input.message) {
+      emailjs
+        .sendForm(
+          YOUR_SERVICE_ID,
+          YOUR_TEMPLATE_ID,
+          form.current,
+          YOUR_PUBLIC_KEY
+        )
+        .then(
+          () => {
+            Toast.fire({
+              icon: "success",
+              title: "Message sent!",
+            });
+            setInput({
+              user_name: "",
+              user_email: "",
+              subject: "",
+              message: "",
+            });
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    } else
+      Toast.fire({
+        icon: "error",
+        title: "Please fill out all the required fields!",
+      });
+  };
+  const [input, setInput] = useState({
+    user_name: "",
+    user_email: "",
+    subject: "",
+    message: "",
+  });
+  const handleInputChange = (e) => {
+    setInput({
+      ...input,
+      [e.target.name]: e.target.value,
+    });
   };
   const [showing, setShowing] = useState(false);
   useEffect(() => {
@@ -50,12 +94,18 @@ const Contact = () => {
               name="user_name"
               className="form-control text-light border-white border-2 border shadow-sm"
               placeholder="Name"
+              value={input.user_name}
+              onChange={handleInputChange}
+              required
             />
             <input
               type="email"
               name="user_email"
               className="form-control text-light border-white border-2 border shadow-sm"
               placeholder="Email"
+              value={input.user_email}
+              onChange={handleInputChange}
+              required
             />
           </div>
           <div className="mb-2">
@@ -64,6 +114,9 @@ const Contact = () => {
               name="subject"
               className="form-control text-light border-white border-2 border shadow-sm"
               placeholder="Subject"
+              value={input.subject}
+              onChange={handleInputChange}
+              required
             />
           </div>
           <div className="mb-2">
@@ -71,7 +124,10 @@ const Contact = () => {
               name="message"
               className="form-control text-light border-white border-2 border shadow-sm"
               placeholder="Message"
+              value={input.message}
+              onChange={handleInputChange}
               rows={4}
+              required
             />
           </div>
           <input

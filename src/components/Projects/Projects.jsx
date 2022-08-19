@@ -53,7 +53,7 @@ const Projects = ({ projects }) => {
                     aria-labelledby={`${project.name} Modal`}
                     aria-hidden="true"
                   >
-                    <div className="modal-dialog modal-lg modal-dialog-centered">
+                    <div className="modal-dialog modal-lg modal-dialog-centered z-index-100">
                       <div className={`${bgColor} modal-content px-4 shadow`}>
                         <div className="modal-header pt-3 pb-1">
                           <h5

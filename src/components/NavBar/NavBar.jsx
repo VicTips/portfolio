@@ -13,11 +13,17 @@ const NavBar = ({ about, projects, contact }) => {
       behavior: "smooth",
     });
   };
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <nav className="navbar navbar-dark navbar-expand-lg bg-dark fixed-top border-bottom border-secondary">
       <div className="container">
-        <div className="navbar-brand">
-          <img src={Logo} alt="logo" height="32" />
+        <div className="navbar-brand brightness pointer">
+          <img src={Logo} alt="logo" height="32" onClick={() => scrollTop()} />
         </div>
 
         <div
@@ -86,7 +92,7 @@ const NavBar = ({ about, projects, contact }) => {
               Contact
             </li>
             <li
-              className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0"
+              className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fucsia-hover"
               onClick={() => {
                 dispatch(changeMode());
                 expanded && setExpanded(!expanded);
@@ -102,7 +108,7 @@ const NavBar = ({ about, projects, contact }) => {
                 strokeWidth="2"
                 style={{ height: "1.4rem" }}
               >
-                {textColor === "text-light" ? (
+                {textColor === "text-light-va" ? (
                   <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
                 ) : (
                   <path

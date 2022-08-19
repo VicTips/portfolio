@@ -136,6 +136,10 @@ body {
   cursor: pointer;
 }
 
+.fucsia-hover:hover {
+  color: var(--fucsia) !important;
+}
+
 .nav-item:hover {
   color: var(--normal-blue);
 }
@@ -183,10 +187,10 @@ body {
 
 .form-control {
   border-radius: 0 !important;
-  background-color: rgb(135, 160, 176) !important;
   border: 0 !important;
   font-weight: 700 !important;
   letter-spacing: 0.05rem !important;
+  background-color: rgb(105, 133, 154) !important;
 }
 
 .form-control::placeholder {
@@ -196,7 +200,7 @@ body {
 
 .form-control:focus {
   outline: 4px solid var(--dark-blue) !important;
-  background-color: rgb(105, 133, 154) !important;
+  background-color: rgb(135, 160, 176) !important;
 }
 
 .tags:before {
@@ -225,6 +229,14 @@ body {
   right: 20px;
   height: 35px;
   width: 35px;
+}
+
+.btn-back-top:hover {
+  background-color: var(--normal-blue);
+}
+
+.brightness:hover {
+  filter: brightness(1.2);
 }
 
 .contact-section-height {
@@ -256,7 +268,7 @@ body {
   }
 }
 
-.animation-1 div {
+/* .animation-1 div {
   opacity: 0;
   animation: fadeIn 1s ease-in both;
 }
@@ -265,14 +277,13 @@ body {
   animation-delay: 1s;
 }
 
-
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translate3d(0, -20%, 0);
+    transform: translateY(-20%);
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
   }
-}
+} */
