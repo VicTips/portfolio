@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { changeMode } from "../../redux/styleSlice";
-import { Link } from "react-scroll";
 import Logo from "../../assets/logo-VA-azul.svg";
 
-const NavBar = () => {
+const NavBar = ({ about, projects, contact }) => {
   const [expanded, setExpanded] = useState(false);
   const dispatch = useDispatch();
   const textColor = useSelector((state) => state.styles.textColor);
+  const scrollToSection = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
   return (
     <nav className="navbar navbar-dark navbar-expand-lg bg-dark fixed-top border-bottom border-secondary">
       <div className="container">
@@ -47,24 +52,47 @@ const NavBar = () => {
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0 mt-2 mt-lg-0 text-light">
-            <Link to="aboutSection">
-              <li className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold letter-spacing">
-                About
-              </li>
-            </Link>
-            <Link to="projectsSection" offset={-100}>
-              <li className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold letter-spacing">
-                Projects
-              </li>
-            </Link>
-            <Link to="contactSection">
-              <li className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold letter-spacing">
-                Contact
-              </li>
-            </Link>
+            <li
+              className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold letter-spacing"
+              onClick={() => {
+                scrollToSection(about);
+                expanded && setExpanded(!expanded);
+              }}
+              data-bs-toggle={expanded && "collapse"}
+              data-bs-target={expanded && "#navbarSupportedContent"}
+            >
+              About
+            </li>
+            <li
+              className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold letter-spacing"
+              onClick={() => {
+                scrollToSection(projects);
+                expanded && setExpanded(!expanded);
+              }}
+              data-bs-toggle={expanded && "collapse"}
+              data-bs-target={expanded && "#navbarSupportedContent"}
+            >
+              Projects
+            </li>
+            <li
+              className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0 fw-semibold letter-spacing"
+              onClick={() => {
+                scrollToSection(contact);
+                expanded && setExpanded(!expanded);
+              }}
+              data-bs-toggle={expanded && "collapse"}
+              data-bs-target={expanded && "#navbarSupportedContent"}
+            >
+              Contact
+            </li>
             <li
               className="nav-item pointer ps-lg-5 px-0 text-center py-2 py-lg-0"
-              onClick={() => dispatch(changeMode())}
+              onClick={() => {
+                dispatch(changeMode());
+                expanded && setExpanded(!expanded);
+              }}
+              data-bs-toggle={expanded && "collapse"}
+              data-bs-target={expanded && "#navbarSupportedContent"}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

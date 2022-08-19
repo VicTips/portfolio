@@ -1,6 +1,7 @@
 :root {
   --normal-blue: #5ce1e6;
   --dark-blue: #38afb3;
+  --fucsia: #bf11e2;
 }
 
 body {
@@ -43,6 +44,14 @@ body {
   color: whitesmoke;
 }
 
+.link-social {
+  color: var(--dark-blue);
+}
+
+.link-social:hover {
+  color: var(--normal-blue);
+}
+
 .link-blue {
   font-size: 0.9rem;
   display: inline-block;
@@ -80,7 +89,7 @@ body {
 }
 
 .underline-blue {
-  background-image: linear-gradient(var(--dark-blue) 0 0);
+  background-image: linear-gradient(70deg, var(--fucsia), var(--normal-blue));
   background-position: bottom center;
   background-size: 4rem 0.3rem;
   background-repeat: no-repeat;
@@ -152,16 +161,25 @@ body {
 
 .form-control {
   border-radius: 0 !important;
-  background-color: rgb(52, 58, 63) !important;
+  background-color: rgb(135, 160, 176) !important;
+  border: 0 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05rem !important;
+}
+
+.form-control::placeholder {
+  color: rgb(209, 206, 206) !important;
+  font-weight: 500 !important;
 }
 
 .form-control:focus {
   outline: 4px solid var(--dark-blue) !important;
-  background-color: rgb(83, 87, 90) !important;
+  background-color: rgb(105, 133, 154) !important;
 }
 
 .tags:before {
   content: "< ";
+  color: var(--fucsia);
 }
 
 .tags::after {
@@ -175,4 +193,87 @@ body {
 
 .filter {
   filter: invert();
+}
+
+.btn-back-top {
+  background-color: var(--normal-blue);
+  position: fixed;
+  color: rgb(255, 255, 255);
+  bottom: 20px;
+  right: 20px;
+  height: 35px;
+  width: 35px;
+}
+
+.contact-section-height {
+  min-height: calc(100vh - 3.35rem);
+}
+
+@media (max-width: 517.5px) {
+  .contact-section-height {
+    min-height: calc(100vh - 4.7rem);
+  }
+}
+
+.text-blue-gradient {
+  background-image: linear-gradient(70deg, var(--fucsia), var(--normal-blue));
+  background-clip: text;
+  color: transparent;
+}
+
+.fade-in {
+  animation: fadeInAnimation ease 2s;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animation-1 div {
+  opacity: 0;
+  animation: fadeIn 1s ease-in both;
+}
+
+.animation-1 #profile-picture {
+  animation-delay: 1s;
+}
+
+.animation-1 #greeting {
+  animation-delay: 2s;
+}
+
+.animation-1 #greeting-name {
+  animation-delay: 3s;
+}
+
+.animation-1 #greeting-title {
+  animation-delay: 4s;
+}
+
+.animation-1 #greeting-fact {
+  animation-delay: 5s;
+}
+
+.animation-1 #btn-cv {
+  animation-delay: 6s;
+}
+
+.animation-1 #skills {
+  animation-delay: 4s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }

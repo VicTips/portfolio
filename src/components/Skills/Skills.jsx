@@ -5,7 +5,7 @@ import { useSelector } from "react-redux/es/exports";
 const Skills = () => {
   const textColor = useSelector((state) => state.styles.textColor);
   return (
-    <div className="container my-3">
+    <div className="container">
       <div className="text-center fs-1 fw-bold underline-blue mb-4 letter-spacing text-blue-dark tags">
         <span className={textColor}>Skills</span>
       </div>
