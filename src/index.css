@@ -261,33 +261,10 @@ body {
   animation: fadeIn 1s ease-in both;
 }
 
-.animation-1 #profile-picture {
+.animation-1 #btn-cv {
   animation-delay: 1s;
 }
 
-.animation-1 #greeting {
-  animation-delay: 2s;
-}
-
-.animation-1 #greeting-name {
-  animation-delay: 3s;
-}
-
-.animation-1 #greeting-title {
-  animation-delay: 4s;
-}
-
-.animation-1 #greeting-fact {
-  animation-delay: 5s;
-}
-
-.animation-1 #btn-cv {
-  animation-delay: 6s;
-}
-
-.animation-1 #skills {
-  animation-delay: 4s;
-}
 
 @keyframes fadeIn {
   from {

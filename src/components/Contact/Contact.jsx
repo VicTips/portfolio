@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { useSelector } from "react-redux";
 
@@ -30,8 +30,18 @@ const Contact = () => {
         }
       );
   };
+  const [showing, setShowing] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY >= (window.innerHeight * 4) / 3 && setShowing(true);
+    });
+  }, []);
   return (
-    <div className="text-secondary py-5 d-flex justify-content-around flex-wrap-reverse">
+    <div
+      className={`text-secondary py-5 d-flex justify-content-around flex-wrap-reverse ${
+        showing ? "animation-1" : "opacity-0"
+      }`}
+    >
       <div className="py-4 d-flex justify-content-center">
         <form ref={form} onSubmit={sendEmail} style={{ maxWidth: "35rem" }}>
           <div className="mb-2 d-flex gap-2">

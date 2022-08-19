@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ProjectsList from "../../services/Constants/ProjectsList";
 import { useSelector } from "react-redux/es/exports";
 
@@ -6,11 +6,19 @@ const Projects = ({ projects }) => {
   const [projectImg, setProjectImg] = useState(
     "https://images2.imgbox.com/f5/8b/bEZr8Fnv_o.png"
   );
+  const [showing, setShowing] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY >= window.innerHeight / 3 && setShowing(true);
+    });
+  }, []);
   const textColor = useSelector((state) => state.styles.textColor);
   const bgColor = useSelector((state) => state.styles.bgColor);
   return (
     <div
-      className="container min-vh-100 h-100 d-flex align-items-center justify-content-center"
+      className={`container min-vh-100 h-100 d-flex align-items-center justify-content-center ${
+        showing ? "animation-1" : "opacity-0"
+      }`}
       ref={projects}
     >
       <div className="row">
