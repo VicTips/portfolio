@@ -4,7 +4,7 @@ import { useSelector } from "react-redux/es/exports";
 
 const Projects = ({ projects }) => {
   const [projectImg, setProjectImg] = useState(
-    "https://images2.imgbox.com/49/a5/4kh31hZ3_o.png"
+    "https://images2.imgbox.com/f5/8b/bEZr8Fnv_o.png"
   );
   const textColor = useSelector((state) => state.styles.textColor);
   const bgColor = useSelector((state) => state.styles.bgColor);
@@ -26,10 +26,14 @@ const Projects = ({ projects }) => {
               {ProjectsList.map((project, index) => (
                 <div key={index} className="py-1">
                   <div
-                    onMouseEnter={() => setProjectImg(project.img)}
+                    onMouseEnter={() => setProjectImg(project.screenshoots[0])}
                     data-bs-toggle="modal"
                     data-bs-target={`#deleteModal${index}`}
-                    className={`fw-bold fs-5 pointer project-hover ${textColor}`}
+                    className={`fw-bold fs-5 pointer project-hover ${
+                      project.screenshoots[0] === projectImg
+                        ? "text-fucsia"
+                        : textColor
+                    }`}
                   >
                     {project.name}
                   </div>
@@ -130,7 +134,7 @@ const Projects = ({ projects }) => {
                             className="carousel slide my-3"
                             data-bs-ride="carousel"
                           >
-                            <div className="carousel-inner shadow">
+                            <div className="carousel-inner border border-4 border-white shadow">
                               {project.screenshoots.map(
                                 (screenshoot, index) => (
                                   <div
@@ -151,18 +155,6 @@ const Projects = ({ projects }) => {
                             </div>
                           </div>
                         </div>
-                        {/* <div className="modal-footer">
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button type="button" className="btn btn-primary">
-                      Save changes
-                    </button>
-                  </div> */}
                       </div>
                     </div>
                   </div>
@@ -177,7 +169,7 @@ const Projects = ({ projects }) => {
               <img
                 src={projectImg}
                 alt="projectImg"
-                className="img-fluid shadow"
+                className="img-fluid shadow border border-4 border-white"
                 style={{ maxHeight: "30rem" }}
               />
             </div>

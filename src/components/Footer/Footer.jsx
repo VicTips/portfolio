@@ -18,7 +18,8 @@ const Footer = ({ contact }) => {
             className="text-center py-3 text-light"
             style={{ fontSize: "0.9rem" }}
           >
-            Copyright © 2022. All Rights Reserved | Designed & Built by{" "}
+            Copyright © 2022. All Rights Reserved{" "}
+            <span className="text-fucsia">|</span> Designed & Built by{" "}
             <strong className="text-blue-normal">Victor Arias</strong>
           </div>
         </div>

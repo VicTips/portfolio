@@ -38,13 +38,13 @@ const Contact = () => {
             <input
               type="text"
               name="user_name"
-              className="form-control text-light border-secondary shadow-sm"
+              className="form-control text-light border-white border-2 border shadow-sm"
               placeholder="Name"
             />
             <input
               type="email"
               name="user_email"
-              className="form-control text-light border-secondary shadow-sm"
+              className="form-control text-light border-white border-2 border shadow-sm"
               placeholder="Email"
             />
           </div>
@@ -52,14 +52,14 @@ const Contact = () => {
             <input
               type="text"
               name="subject"
-              className="form-control text-light border-secondary shadow-sm"
+              className="form-control text-light border-white border-2 border shadow-sm"
               placeholder="Subject"
             />
           </div>
           <div className="mb-2">
             <textarea
               name="message"
-              className="form-control text-light border-secondary shadow-sm"
+              className="form-control text-light border-white border-2 border shadow-sm"
               placeholder="Message"
               rows={4}
             />
@@ -67,7 +67,7 @@ const Contact = () => {
           <input
             type="submit"
             value="Send message"
-            className="btn-blue mt-3 w-100 border-0 letter-spacing fw-bold shadow"
+            className="btn-blue mt-3 w-100 letter-spacing fw-bold shadow border-white border-2 border"
           />
         </form>
       </div>
