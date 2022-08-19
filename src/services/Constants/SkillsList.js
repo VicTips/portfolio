@@ -52,22 +52,22 @@ const SkillsList = [
     name: "GitHub",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
   },
-  {
-    name: "Canva",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
-  },
-  {
-    name: "VSCode",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-  },
-  {
-    name: "Slack",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"
-  },
-  {
-    name: "Trello",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
-  }
+  // {
+  //   name: "Canva",
+  //   img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
+  // },
+  // {
+  //   name: "VSCode",
+  //   img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+  // },
+  // {
+  //   name: "Slack",
+  //   img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"
+  // },
+  // {
+  //   name: "Trello",
+  //   img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
+  // }
 ];
 
 export default SkillsList;
