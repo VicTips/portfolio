@@ -12,7 +12,7 @@ const App = () => {
   const contact = useRef(null);
   const bgColor = useSelector(state => state.styles.bgColor);
   return (
-    <div className={`${bgColor} fade-in`}>
+    <div className={`${bgColor} fade-in bg-img`}>
       <NavBar about={about} projects={projects} contact={contact} />
       <ScrollToTop />
       <About about={about} />
