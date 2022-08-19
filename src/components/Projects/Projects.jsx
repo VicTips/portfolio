@@ -16,18 +16,24 @@ const Projects = ({ projects }) => {
   const bgColor = useSelector((state) => state.styles.bgColor);
   return (
     <div
-      className={`container min-vh-100 h-100 d-flex align-items-center justify-content-center ${
-        showing ? "animation-1" : "opacity-0"
-      }`}
+      className="container min-vh-100 h-100 d-flex align-items-center justify-content-center py-5"
       ref={projects}
     >
       <div className="row">
         <div className="col-lg-5 d-flex justify-content-center alignt-items-center py-lg-5 py-3">
           <div>
-            <div className="text-center fs-1 fw-bold underline-blue letter-spacing text-blue-dark tags mb-3">
+            <div
+              className={`text-center fs-1 fw-bold underline-blue letter-spacing text-blue-dark tags mb-3 ${
+                showing ? "animation-1" : "opacity-0"
+              }`}
+            >
               <span className={textColor}>Projects</span>
             </div>
-            <div className="text-secondary mb-xl-3 mb-xxl-4 mb-2 fs-5 text-center">
+            <div
+              className={`text-secondary mb-xl-3 mb-xxl-4 mb-2 fs-5 text-center ${
+                showing ? "animation-1" : "opacity-0"
+              }`}
+            >
               These are <strong>some</strong> of my projects
             </div>
             <div className="text-center">
@@ -41,7 +47,7 @@ const Projects = ({ projects }) => {
                       project.screenshoots[0] === projectImg
                         ? "text-fucsia"
                         : textColor
-                    }`}
+                    } ${showing ? "animation-1" : "opacity-0"}`}
                   >
                     {project.name}
                   </div>
@@ -171,7 +177,11 @@ const Projects = ({ projects }) => {
             </div>
           </div>
         </div>
-        <div className="col-lg-7 d-flex justify-content-center align-items-center">
+        <div
+          className={`col-lg-7 d-flex justify-content-center align-items-center ${
+            showing ? "animation-1" : "opacity-0"
+          }`}
+        >
           {projectImg !== "" && (
             <div className="d-flex justify-content-center">
               <img

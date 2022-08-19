@@ -82,7 +82,7 @@ const Contact = () => {
   }, []);
   return (
     <div
-      className={`text-secondary py-5 d-flex justify-content-around flex-wrap-reverse ${
+      className={`text-secondary py-5 my-4 d-flex justify-content-around flex-wrap-reverse ${
         showing ? "animation-1" : "opacity-0"
       }`}
     >

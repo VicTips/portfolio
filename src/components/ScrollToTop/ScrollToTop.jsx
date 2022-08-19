@@ -18,7 +18,7 @@ const ScrollToTop = () => {
       {showBtn && (
         <div
           onClick={() => scrollTop()}
-          className="pointer btn-back-top d-flex align-items-center justify-content-center shadow"
+          className="pointer btn-back-top d-flex align-items-center justify-content-center shadow border border-2 border-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
