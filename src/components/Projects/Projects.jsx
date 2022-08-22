@@ -42,7 +42,7 @@ const Projects = ({ projects }) => {
                   <div
                     onMouseEnter={() => setProjectImg(project.screenshoots[0])}
                     data-bs-toggle="modal"
-                    data-bs-target={`#deleteModal${index}`}
+                    data-bs-target={`#projectModal${index}`}
                     className={`fw-bold fs-5 pointer project-hover ${
                       project.screenshoots[0] === projectImg
                         ? "text-fucsia"
@@ -54,7 +54,7 @@ const Projects = ({ projects }) => {
                   {/* Details Modal */}
                   <div
                     className="modal fade"
-                    id={`deleteModal${index}`}
+                    id={`projectModal${index}`}
                     tabIndex="-1"
                     aria-labelledby={`${project.name} Modal`}
                     aria-hidden="true"
