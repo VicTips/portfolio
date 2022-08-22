@@ -15,7 +15,7 @@ const Projects = ({ projects }) => {
   const textColor = useSelector((state) => state.styles.textColor);
   const bgColor = useSelector((state) => state.styles.bgColor);
   return (
-    <div
+    <section
       className="container min-vh-100 h-100 d-flex align-items-center justify-content-center py-5"
       ref={projects}
     >
@@ -194,7 +194,7 @@ const Projects = ({ projects }) => {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

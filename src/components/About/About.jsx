@@ -6,7 +6,7 @@ import CV from "../../assets/VictorArias-CV-FullStackWebDeveloper.pdf";
 const About = ({ about }) => {
   const textColor = useSelector((state) => state.styles.textColor);
   return (
-    <div
+    <section
       className="container d-flex align-items-center justify-content-center row min-vh-100 mx-auto pt-5 pt-lg-0 animation-1"
       ref={about}
     >
@@ -59,7 +59,7 @@ const About = ({ about }) => {
       >
         <Skills />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -2,8 +2,9 @@ import React from "react";
 import Contact from "../Contact/Contact";
 
 const Footer = ({ contact }) => {
+  const currentYear = new Date().getFullYear();
   return (
-    <div className="min-vh-100">
+    <section className="min-vh-100">
       <div
         className="border-bottom border-secondary d-flex align-items-center contact-section-height"
         ref={contact}
@@ -18,13 +19,13 @@ const Footer = ({ contact }) => {
             className="text-center py-3 text-light"
             style={{ fontSize: "0.9rem" }}
           >
-            Copyright © 2022. All Rights Reserved{" "}
+            Copyright © {currentYear}. All Rights Reserved{" "}
             <span className="text-fucsia">|</span> Designed & Built by{" "}
             <strong className="text-blue-normal">Victor Arias</strong>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
