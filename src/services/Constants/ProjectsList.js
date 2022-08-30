@@ -18,7 +18,7 @@ const ProjectsList = [
   {
     name: "Loan Calculator Web App",
     description: "This is a personal project that allows the user to create amortization schedules for loans with either fixed or variable payments.",
-    technologies: ["React", "Material UI", "JavaScript"],
+    technologies: ["React", "Redux Toolkit", "Material UI", "JavaScript"],
     screenshoots: ["https://images2.imgbox.com/49/a5/4kh31hZ3_o.png", "https://images2.imgbox.com/84/97/SqjZs7Rw_o.png", "https://images2.imgbox.com/fd/82/2H8m0RIl_o.png", "https://images2.imgbox.com/c2/a5/9K5EDqs9_o.png"],
     repository: "https://github.com/VicTips/tabla-fija-variable",
     siteURL: "https://simulador-credito.netlify.app/"
