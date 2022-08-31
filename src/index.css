@@ -292,3 +292,24 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+.project-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.project-name {
+  bottom: 50%;
+  display: none;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card:hover .project-img {
+  filter: brightness(0.4) !important;
+}
+
+.project-card:hover .project-name {
+  display: block;
+}
