@@ -5,7 +5,7 @@ const ProjectsList = [
     technologies: ["React", "Redux Toolkit", "Bootstrap", "NodeJS", "Express", "PostgreSQL", "Sequelize"],
     screenshoots: ["https://images2.imgbox.com/f5/8b/bEZr8Fnv_o.png", "https://images2.imgbox.com/a4/4d/jVq0rZuc_o.png", "https://images2.imgbox.com/0a/fb/EW3BjIM0_o.png", "https://images2.imgbox.com/2a/7e/8mAXPfRa_o.png", "https://images2.imgbox.com/fd/b1/Ij32YZwv_o.png", "https://images2.imgbox.com/e7/ee/9wZ96MfK_o.png", "https://images2.imgbox.com/a4/3e/4dmYAMcW_o.png", "https://images2.imgbox.com/58/bd/bn5Y4agf_o.png", "https://images2.imgbox.com/38/1e/wVeLwk7r_o.png", "https://images2.imgbox.com/c1/2d/vATHyi8C_o.png", "https://images2.imgbox.com/61/08/82BRzPvC_o.png"],
     repository: "https://github.com/PF-Henry/E-Commerce-Client",
-    siteURL: "https://hexatech-store.netlify.app/"
+    siteURL: "https://hexatech-store.vercel.app/"
   },
   {
     name: "Dogs Web App",
